@@ -1,0 +1,100 @@
+/* public/css/tokopedia-style.css */
+
+/* Variabel Warna Utama (Hijau Tokopedia) */
+:root {
+    --toko-green: #42b549;
+    --toko-green-dark: #3aa640;
+    --toko-text: #333;
+}
+
+body {
+    background-color: #f6f6f6; /* Latar belakang abu-abu muda */
+    color: var(--toko-text);
+}
+
+/* Kustomisasi Navbar */
+.navbar-toko {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.navbar-brand-toko {
+    color: var(--toko-green) !important;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+/* Kustomisasi Tombol */
+.btn-toko-primary {
+    background-color: var(--toko-green);
+    border-color: var(--toko-green);
+    color: #ffffff;
+    font-weight: 600;
+}
+.btn-toko-primary:hover {
+    background-color: var(--toko-green-dark);
+    border-color: var(--toko-green-dark);
+    color: #ffffff;
+}
+
+.btn-toko-outline {
+    border: 1px solid var(--toko-green);
+    color: var(--toko-green);
+    font-weight: 600;
+}
+.btn-toko-outline:hover {
+    background-color: var(--toko-green);
+    color: #ffffff;
+}
+
+/* Kustomisasi Kartu Produk (Paling Penting) */
+.card-product {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: all 0.3s ease; /* Ini adalah "animasi" sederhana */
+    background-color: #ffffff;
+}
+.card-product:hover {
+    transform: translateY(-5px); /* Animasi saat hover */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.card-product .card-img-top {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    object-fit: cover;
+    height: 200px; /* Samakan tinggi gambar seperti di PDF */
+}
+
+.card-product .card-body {
+    padding: 1rem;
+    text-align: left; /* Ubah dari text-center */
+}
+
+.card-product .card-title {
+    font-size: 1rem; /* Sedikit lebih kecil */
+    font-weight: 600;
+    color: var(--toko-text);
+    /* Batasi teks agar tidak terlalu panjang */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 3em; /* Sesuaikan dengan font-size * line-height * 2 */
+}
+
+.card-product .card-price {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #333; /* Harga bisa dibuat lebih menonjol */
+    margin-top: 0.5rem;
+}
+
+/* Kustomisasi Halaman Login */
+.card-login {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
