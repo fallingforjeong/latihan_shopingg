@@ -9,11 +9,9 @@
     <link 
         href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" 
         rel="stylesheet">
-        
     <style>
         /* --- Import Font --- */
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-
         /* --- Style Body (Gradasi Langit) --- */
         body {
             font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -21,7 +19,6 @@
             color: #003366; /* Teks default biru tua */
             min-height: 100vh;
         }
-
         /* --- Style Navbar (Dari Login) --- */
         .navbar-samsung {
             background-color: #20bdceff;
@@ -46,7 +43,6 @@
             background-color: #ffffff;
             color: #000000;
         }
-        
         /* --- Animasi (Dari Login) --- */
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(30px) scale(0.95); }
@@ -55,7 +51,6 @@
         .fade-in-content {
              animation: fadeIn 0.7s ease-out;
         }
-
         /* --- Tombol Kustom (Dari Login) --- */
         .btn-submit-custom {
             background-color: #004a99; /* Biru tua */
@@ -73,13 +68,11 @@
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(0, 74, 153, 0.4);
         }
-        
         /* --- [BARU] Style Halaman Produk --- */
         .page-title {
             color: #003366; /* Biru tua solid */
             font-weight: 700;
         }
-        
         /* [BARU] Kartu Produk */
         .card-product-custom {
             background-color: #ffffff;
@@ -136,7 +129,7 @@
                         <h5 class="card-title">{{ $item['nama'] }}</h5>
                         <p class="card-price">{{ $item['harga'] }}</p>
                         <a href="{{ route('produk.detail', $item['id']) }}"
-                            class="btn btn-submit-custom">Check Out</a>
+                            class="btn btn-submit-custom">Lihat Detail</a>
                     </div>
                 </div>
             </div>

@@ -66,6 +66,7 @@
             transition: all 0.3s ease;
             border: none;
             box-shadow: 0 4px 15px rgba(0, 74, 153, 0.3);
+            text-decoration: none; /* [BARU] Hapus garis bawah link */
         }
         .btn-submit-custom:hover {
             background-color: #003366; /* Biru lebih gelap */
@@ -74,7 +75,7 @@
             box-shadow: 0 6px 20px rgba(0, 74, 153, 0.4);
         }
         
-        /* --- [BARU] Tombol Sekunder (Outline) --- */
+        /* --- Tombol Sekunder (Outline) --- */
         .btn-secondary-sky {
             background-color: transparent;
             color: #004a99;
@@ -83,6 +84,7 @@
             padding: 0.75rem 1.25rem;
             transition: all 0.3s ease;
             border: 2px solid #004a99; /* Border biru */
+            text-decoration: none; /* [BARU] Hapus garis bawah link */
         }
         .btn-secondary-sky:hover {
             background-color: #004a99; /* Jadi solid */
@@ -91,7 +93,7 @@
             box-shadow: 0 6px 20px rgba(0, 74, 153, 0.2);
         }
 
-        /* --- [BARU] Style Halaman Detail --- */
+        /* --- Style Halaman Detail --- */
         .content-wrapper {
             background-color: #ffffff;
             color: #333; /* Teks gelap untuk konten */
@@ -134,12 +136,17 @@
                     <h4 class="price-detail">{{ $detail['harga'] }}</h4>
                     <p class="mt-3">{{ $detail['deskripsi'] }}</p>
                     <div class="mt-4">
-                        <button class="btn btn-submit-custom me-2">Check Out</button>
+                        
+                        <a href="{{ route('checkout', $detail['id']) }}" class="btn btn-submit-custom me-2">
+                            Konfirmasi Beli
+                        </a>
+                        
                         <a href="{{ route('produk') }}" class="btn btn-secondary-sky">Back</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</body>
+    
+    </body>
 </html>
